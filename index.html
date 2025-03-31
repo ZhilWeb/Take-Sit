@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Взяли-сели</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/Logo.svg" alt="" class="logo">
+    </header>
+    
+    <section class="slider_place">
+      <div class="carousel" data-carousel>
+        <button class="carousel_button prev" data-carousel-button="prev">&#8592;</button>
+        <button class="carousel_button next" data-carousel-button="next">&#8594;</button>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <img src="images/slider/Comp1400/Slider1.png" alt="">
+          </li>
+          <li class="slide">
+            <img src="images/slider/Comp1400/Slider2.png" alt="">
+          </li>
+          <li class="slide">
+            <img src="images/slider/Comp1400/Slider3.png" alt="">
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="app_container">
+
+    
+      <div id="form_first_order">
+          <h2>При первом заказе<br> скидка 30%!</h2>
+          <div class="input_first_order col-10 col-md-8 col-lg-6">
+            <input type="text" class="person_name" placeholder="Имя">
+            <input type="tel" class="person_tel" placeholder="Номер телефона" 
+              minlength="11" maxlength="11" pattern="[0-9]">
+            <div class="booking_button" onclick="clickBookingButton()">Забронировать</div>
+            <div id="form_success_booking" class="col-10 col-md-8 col-lg-6">
+              <div class="close" onclick="clickClose()">&#10006;</div>
+              <div class="info_success_booking">Запрос на бронь отправлен. Мы перезвоним вам через несколько минут для подтверждения. Спасибо!</div>
+              
+            </div>
+          </div>
+      </div>
+
+      
+
+      <div class="photo_gallery col-10 col-md-8">
+          <h2>Фотогалерея</h2>
+          <div class="photos">
+            <img src="images/Кафе.png" alt="">
+            <img src="images/Кафе2.jpg" alt="">
+            <img src="images/Кафе3.jpg" alt="">
+          </div>
+      </div>
+
+      <div class="booking col-10 col-md-8">
+
+        <h2>Бронирование</h2>
+
+        <div class="photos">
+          <div class="table_booking">
+            <h2>Столик</h2>
+            <img src="images/Столик.jpg" alt="">
+          </div>
+
+          <div class="cabin2">
+            <h2>Кабинка для двоих</h2>
+            <img src="images/Кабинка2.jpg" alt="">
+          </div>
+
+          <div class="cabin4">
+            <h2>Кабинка для четверых</h2>
+            <img src="images/Кабинка4.jpg">
+          </div>
+
+          <div class="cabin_company">
+            <h2>Кабинка для компании</h2>
+            <div class="photo_cabin_company">
+              <h3>500 руб. / час<br>1000 руб. / 3 часа </h3>
+            </div>
+          </div>
+
+          <div class="room2">
+            <h2>Комната для двоих</h2>
+            <div class="photo_room2">
+              <h3>1000 руб. / час<br>1500 руб. / 3 часа </h3>
+            </div>
+          </div>
+
+          <div class="room_company">
+            <h2>Комната для компании</h2>
+            <div class="photo_room_company">
+              <h3>2000 руб. / час<br>3000 руб. / 3 часа </h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container_reviews col-10 col-md-8 col-lg-6">
+        <h2>Отзывы</h2>
+
+        <div class="reviews">
+          <div class="review">
+            <div class="text_review">
+              <h4>Lorem ipsum odor amet, consectetuer adipiscing elit. Luctus
+                vel nascetur venenatis penatibus litora fames finibus.</h4>
+              
+              <h3>John Doe</h3>
+            </div>
+          </div>     
+          <div class="review">
+            <div class="text_review">
+              <h4>С учётом сложившейся международной обстановки, сплочённость команды профессионалов
+                 играет важную роль в формировании форм воздействия!</h4>
+              
+              <h3>Джон Доу</h3>
+            </div>
+          </div>
+          <div class="review">
+            <div class="text_review">
+              <h4>Lorem ipsum odor amet, consectetuer adipiscing elit. Luctus
+                vel nascetur venenatis penatibus litora fames finibus.</h4>
+              
+              <h3>John Doe</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <footer>
+        <div class="text_footer col-10">
+          <div class="address">
+            <h3>Адрес:</h3>
+            <h4>ул. Ленина, 87</h4>
+          </div>
+          <div class="booking_call">
+            <h3>Приём заказов<br>на бронирование:</h3>
+            <h4>8 800 555-35-35</h4>
+          </div>
+          
+          <h4 class="copyright">© Взяли-Сели, 2024</h4>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

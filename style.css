@@ -1,0 +1,1066 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html{
+	height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #FFFFD1;
+}
+
+body {
+    line-height: 1;
+    overflow-y: scroll;
+    height: 100%;
+}
+  
+ol, ul {
+    list-style: none; 
+}
+  
+blockquote, q {
+    quotes: none; 
+}
+  
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none; 
+}
+
+  
+table {
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+  
+h1 {
+    font-size: 48px;
+    font-weight: 600; 
+}
+  
+h2 {
+    font-size: 34px;
+    font-weight: 600;
+}
+  
+h3 {
+    font-size: 20px;
+    font-weight: normal; 
+}
+  
+h4 {
+    font-size: 16px;
+    font-weight: normal; 
+}
+  
+h5 {
+    font-size: 14px;
+    font-weight: normal; 
+}
+  
+h6 {
+    font-size: 12px;
+    font-weight: normal; 
+}
+
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo{
+    height: 70px;
+}
+
+.slider_place{
+    background-color: #FFF;
+    width: 100%;
+    height: 36vw;
+    border-top: 1px solid #F96625;
+    border-bottom: 1px solid #F96625;
+    margin-bottom: 60px;
+}
+
+
+
+.carousel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel > ul{
+    list-style: none;
+}
+
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.slide > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+
+.slide[data-active]{
+    opacity: 1;
+    transition-delay: 0ms;
+}
+
+
+.carousel_button{
+    position: absolute;
+    background: none;
+    z-index: 1;
+    border: none;
+    font-size: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9F46FF;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 0 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel_button:hover, .carousel_button:focus{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.carousel_button.prev{
+    left: 16px;
+}
+
+.carousel_button.next{
+    right: 16px;
+}
+
+.app_container{
+    width: 406px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#form_first_order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 320px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+
+#form_first_order h2{
+    font-size: 32px;
+    color: #F96625;
+    text-align: center;
+}
+
+.input_first_order{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 210px;
+}
+
+.person_name, .person_tel{
+    padding-left: 17px;
+    color: #9F46FF;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    height: 50px;
+    background-color: #FFF;
+    border: 2px solid #F96625;
+    outline: 1px solid #F96625;
+    border-radius: 10px;
+}
+
+.person_name::placeholder, .person_tel::placeholder{
+    color: #9F46FF;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 70%;
+}
+
+.person_name:focus, .person_tel:focus{
+    outline-width: 2px;
+    outline-color: #000;
+}
+
+.booking_button{
+    height: 50px;
+    background-color: #F96625;
+    width: 100%;
+    border: 3px solid #F96625;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.booking_button:hover{
+    background-color: #FFF;
+    color: #F96625;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+#form_success_booking{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: 150px;
+    background-color: #FFF;
+    color: #000;
+    border: 3px solid rgba(249, 102, 37, 0.8);
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    animation: showBlock .5s linear forwards;
+    z-index: 3;
+}
+
+@keyframes showBlock {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+#form_success_booking > .close{
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#form_success_booking > .close:hover{
+    cursor: pointer;
+}
+
+#form_success_booking > .info_success_booking{
+    flex-grow: 0.8;
+}
+
+
+
+.photo_gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 813px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+
+.photo_gallery h2{
+    font-size: 32px;
+    color: #F96625;
+    text-align: center;
+}
+
+.photo_gallery .photos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 745px;
+    width: 100%;
+}
+
+.photo_gallery .photos img{
+    height: 215px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.booking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1978px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+
+
+.booking h2{
+    font-size: 32px;
+    color: #F96625;
+    text-align: center;
+}
+
+.booking .photos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 1900px;
+    width: 100%;
+}
+
+.table_booking, .cabin2, .cabin4, .cabin_company, .room2, .room_company{
+    height: 267px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table_booking h2,  .cabin2 h2, .cabin4 h2, .cabin_company h2, .room2 h2, .room_company h2{
+    font-size: 26px;
+    color: #F96625;
+    text-align: center;
+}
+
+.table_booking img, .cabin2 img, .cabin4 img{
+    height: 215px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.photo_cabin_company, .photo_room2, .photo_room_company{
+    height: 215px;
+    width: 100%;
+    border-radius: 10px;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.photo_cabin_company{
+    background-image: url(images/КабинкаКомапния.jpg);
+}
+
+.photo_room2{
+    background-image: url(images/Комната2.jpg);
+}
+
+.photo_room_company{
+    background-image: url(images/КомнатаКомпания.jpg);
+}
+
+
+.photo_cabin_company h3, .photo_room2 h3, .photo_room_company h3{
+    text-align: center;
+    font-weight: 600;
+}
+
+.container_reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+
+.container_reviews h2{
+    font-size: 32px;
+    color: #F96625;
+    text-align: center;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 741px;
+    width: 100%;
+}
+
+.review{
+    height: 227px;
+    width: 100%;
+    background-image: url(images/comment1.svg);
+    background-size: cover;
+}
+
+.text_review{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 23px;
+    margin-top: 23px;
+    height: 130px;
+    width: 280px;
+}
+
+.text_review h4{
+    color: #9F46FF;
+    
+}
+
+.text_review h3{
+    color: #9F46FF;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+
+footer{
+    width: 100%;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.text_footer{
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text_footer .address{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 57px;
+}
+
+.text_footer .booking_call{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 87px;
+}
+
+.text_footer h3{
+    font-size: 24px;
+    color: #F96625;
+    font-weight: 600;
+}
+
+.text_footer h4{
+    color: #9F46FF;
+}
+
+.text_footer .copyright{
+    color: #F96625;
+    font-weight: 600;
+}
+
+
+
+@media (min-width: 576px){
+    header{
+        height: 134px;
+        margin-bottom: 25px;
+    }
+
+    .logo{
+        height: 94px;
+    }
+
+    .slider_place{
+        /*height: 250px;*/
+        margin-bottom: 70px;
+    }
+
+    .app_container{
+        width: 516px;
+    }
+
+    #form_first_order{
+        height: 403px;
+        margin-bottom: 150px;
+    }
+
+    #form_first_order h2{
+        font-size: 40px;
+    }
+
+    .input_first_order{
+        height: 271px;
+    }
+
+    .person_name, .person_tel{
+        padding-left: 27px;
+        font-size: 20px;
+        height: 67px;
+    }
+
+    .person_name::placeholder, .person_tel::placeholder{
+        font-size: 20px;
+    }
+
+    .booking_button{
+        height: 67px;
+        font-size: 20px;
+    }
+
+    .photo_gallery{
+        height: 1031px;
+        margin-bottom: 150px;
+    }
+
+    .photo_gallery h2{
+        font-size: 40px;
+    }
+
+    .photo_gallery .photos{
+        height: 949px;
+    }
+
+    .photo_gallery .photos img{
+        height: 273px;
+    }
+
+    .booking{
+        height: 2469px;
+        margin-bottom: 150px;
+    }
+
+    .booking h2{
+        font-size: 40px;
+    }
+
+    .booking .photos{
+        height: 2369px;
+    }
+
+    .table_booking, .cabin2, .cabin4, .cabin_company, .room2, .room_company{
+        height: 338px;
+    }
+
+    .table_booking h2,  .cabin2 h2, .cabin4 h2, .cabin_company h2, .room2 h2, .room_company h2{
+        font-size: 32px;
+    }
+
+    .table_booking img, .cabin2 img, .cabin4 img{
+        height: 273px;
+    }
+
+    .photo_cabin_company, .photo_room2, .photo_room_company{
+        height: 273px;
+    }
+
+    .photo_cabin_company h3, .photo_room2 h3, .photo_room_company h3{
+        font-size: 24px;
+    }
+
+    .container_reviews{
+        height: 1036px;
+        margin-bottom: 150px;
+    }
+
+    .container_reviews h2{
+        font-size: 40px;
+    }
+
+    .reviews{
+        height: 964px;
+    }
+
+    .review{
+        height: 287px;
+    }
+
+    .text_review{
+        margin-left: 27px;
+        margin-top: 30px;
+        width: 380px;
+        height: 160px;
+    }
+
+    .text_review h4{
+        font-size: 20px;
+    }
+
+    .text_review h3{
+        font-size: 24px;
+    }
+
+    footer{
+        height: 482px;
+    }
+
+    .text_footer{
+        height: 352px;
+    }
+
+    .text_footer .address{
+        height: 75px;
+    }
+
+    .text_footer .booking_call{
+        height: 115px;
+    }
+
+    .text_footer h3{
+        font-size: 32px;
+    }
+
+    .text_footer h4{
+        font-size: 20px;
+    }
+
+    .text_footer .copyright{
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width: 768px){
+
+    header{
+        margin-bottom: 40px;
+    }
+
+    .slider_place{
+        /*height: 300px;*/
+        margin-bottom: 85px;
+    }
+
+    .app_container{
+        width: 696px;
+    }
+
+    .person_name, .person_tel{
+        padding-left: 34px;
+    }
+
+    .photo_gallery{
+        height: 1080px;
+    }
+
+    .photo_gallery .photos{
+        height: 1006px;
+    }
+
+    .photo_gallery .photos img{
+        height: 292px;
+    }
+
+    .booking{
+        height: 2618px;
+    }
+
+    .booking .photos{
+        height: 2518px;
+    }
+
+    .table_booking, .cabin2, .cabin4, .cabin_company, .room2, .room_company{
+        height: 357px;
+    }
+
+    .table_booking img, .cabin2 img, .cabin4 img{
+        height: 292px;
+    }
+
+    .photo_cabin_company, .photo_room2, .photo_room_company{
+        height: 292px;
+    }
+
+    .container_reviews{
+        height: 1167px;
+    }
+
+    .reviews{
+        height: 1088px;
+    }
+
+    .review{
+        height: 311px;
+    }
+
+    .text_review{
+        margin-left: 32px;
+        margin-top: 35px;
+    }
+}
+
+
+@media (min-width: 992px){
+
+    .app_container{
+        width: 936px;
+    }
+
+    /*.slider_place{
+        height: 350px;
+    }*/
+    .photo_gallery{
+        height: 1454px;
+    }
+
+    .photo_gallery h2{
+        font-size: 48px;
+    }
+
+    .photo_gallery .photos{
+        height: 1358px;
+    }
+
+    .photo_gallery .photos img{
+        height: 394px;
+    }
+
+    .booking{
+        height: 3410px;
+    }
+
+    .booking h2{
+        font-size: 48px;
+    }
+
+    .booking .photos{
+        height: 3292px;
+    }
+
+    .table_booking, .cabin2, .cabin4, .cabin_company, .room2, .room_company{
+        height: 468px;
+    }
+
+    .table_booking h2,  .cabin2 h2, .cabin4 h2, .cabin_company h2, .room2 h2, .room_company h2{
+        font-size: 34px;
+    }
+
+    .table_booking img, .cabin2 img, .cabin4 img{
+        height: 396px;
+    }
+
+    .photo_cabin_company, .photo_room2, .photo_room_company{
+        height: 396px;
+    }
+
+    .photo_cabin_company h3, .photo_room2 h3, .photo_room_company h3{
+        font-size: 28px;
+    }
+
+    .container_reviews{
+        height: 1180px;
+    }
+
+    .container_reviews h2{
+        font-size: 48px;
+    }
+
+    .reviews{
+        height: 1091px;
+    }
+
+    .review{
+        height: 314px;
+    }
+
+    footer{
+        height: 650px;
+    }
+
+    .text_footer{
+        height: 450px;
+    }
+
+    .text_footer .address{
+        height: 100px;
+    }
+
+    .text_footer .booking_call{
+        height: 149px;
+    }
+
+    .text_footer h3{
+        font-size: 42px;
+    }
+
+    .text_footer h4{
+        font-size: 28px;
+    }
+
+    .text_footer .copyright{
+        font-size: 28px;
+    }
+}
+
+
+@media (min-width: 1200px){
+    header{
+        margin-bottom: 45px;
+    }
+
+    .slider_place{
+        /*height: 420px;*/
+        margin-bottom: 100px;
+    }
+
+    .app_container{
+        width: 1116px;
+    }
+
+    #form_first_order{
+        height: 441px;
+        margin-bottom: 200px;
+    }
+
+    .input_first_order{
+        height: 313px;
+    }
+
+    .person_name, .person_tel{
+        height: 79px;
+    }
+
+    .booking_button{
+        height: 79px;
+    }
+
+    .photo_gallery{
+        height: 1718px;
+        margin-bottom: 200px;
+    }
+
+    .photo_gallery .photos{
+        height: 1622px;
+    }
+
+    .photo_gallery .photos img{
+        height: 472px;
+    }
+
+    .booking{
+        height: 4128px;
+    }
+
+    .booking .photos{
+        height: 4018px;
+    }
+
+    .table_booking, .cabin2, .cabin4, .cabin_company, .room2, .room_company{
+        height: 543px;
+    }
+
+    .table_booking h2,  .cabin2 h2, .cabin4 h2, .cabin_company h2, .room2 h2, .room_company h2{
+        font-size: 38px;
+    }
+
+    .table_booking img, .cabin2 img, .cabin4 img{
+        height: 472px;
+    }
+
+    .photo_cabin_company, .photo_room2, .photo_room_company{
+        height: 472px;
+    }
+
+    .photo_cabin_company h3, .photo_room2 h3, .photo_room_company h3{
+        font-size: 32px;
+    }
+
+    .container_reviews{
+        height: 1405px;
+        margin-bottom: 200px;
+    }
+
+    .reviews{
+        height: 1310px;
+    }
+
+    .review{
+        height: 374px;
+    }
+
+    .text_review{
+        height: 200px;
+        width: 480px;
+    }
+
+    .text_review h4{
+        font-size: 26px;
+    }
+
+    .text_review h3{
+        font-size: 30px;
+    }
+}
+
+
+@media (min-width: 1400px){
+    .slider_place{
+        /*height: 500px;*/
+        margin-bottom: 120px;
+    }
+
+    .app_container{
+        width: 1296px;
+    }
+
+    #form_first_order{
+        height: 488px;
+    }
+
+    #form_first_order h2{
+        font-size: 44px;
+    }
+
+    .input_first_order{
+        height: 321px;
+    }
+
+    .person_name, .person_tel{
+        padding-left: 38px;
+        height: 85px;
+    }
+
+    .person_name::placeholder, .person_tel::placeholder{
+        font-size: 24px;
+    }
+
+    .booking_button{
+        height: 85px;
+        font-size: 24px;
+    }
+
+    .photo_gallery{
+        height: 1992px;
+    }
+
+    .photo_gallery h2{
+        font-size: 52px;
+    }
+
+    .photo_gallery .photos{
+        height: 1886px;
+    }
+
+    .photo_gallery .photos img{
+        height: 548px;
+    }
+
+    .booking{
+        height: 4988px;
+    }
+
+    .booking h2{
+        font-size: 52px;
+    }
+
+    .booking .photos{
+        height: 4848px;
+    }
+
+    .table_booking, .cabin2, .cabin4, .cabin_company, .room2, .room_company{
+        height: 628px;
+    }
+
+    .table_booking h2,  .cabin2 h2, .cabin4 h2, .cabin_company h2, .room2 h2, .room_company h2{
+        font-size: 44px;
+    }
+
+    .table_booking img, .cabin2 img, .cabin4 img{
+        height: 548px;
+    }
+
+    .photo_cabin_company, .photo_room2, .photo_room_company{
+        height: 548px;
+    }
+
+    .photo_cabin_company h3, .photo_room2 h3, .photo_room_company h3{
+        font-size: 38px;
+    }
+
+    .container_reviews{
+        height: 1635px;
+    }
+
+    .container_reviews h2{
+        font-size: 52px;
+    }
+
+    .reviews{
+        height: 1530px;
+    }
+
+    .review{
+        height: 434px;
+    }
+
+    .text_review{
+        margin-left: 40px;
+        margin-top: 43px;
+        height: 240px;
+        width: 565px;
+    }
+
+    .text_review h4{
+        font-size: 32px;
+    }
+
+    .text_review h3{
+        font-size: 36px;
+    }
+}
